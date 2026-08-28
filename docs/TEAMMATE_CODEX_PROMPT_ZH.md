@@ -1,8 +1,8 @@
 # 可直接交给队友 Codex 的完整执行 Prompt
 
-开发/共享环境基线：`C:/Users/59167/Desktop/Home/PythonProject/E-Truck-Drone-System/.venv`；解释器 `C:/Users/59167/Desktop/Home/PythonProject/E-Truck-Drone-System/.venv/Scripts/python.exe`。这是作者机器上的环境。你若在另一台机器，必须使用并记录当地用户已确认的 Python 3.12 解释器，不要假设此路径存在，不要未经同意新建或修改环境。
+开发/共享环境基线：`C:/Users/59167/Desktop/Home/PythonProject/E-Truck-Drone-System/.venv`；解释器 `C:/Users/59167/Desktop/Home/PythonProject/E-Truck-Drone-System/.venv/Scripts/python.exe`。这是作者机器上的环境。你若在另一台机器，必须使用并记录当地用户已确认的 Python 3.12 解释器，可以考虑补充所需要的库。
 
-以下内容可整体作为一条 Codex 用户消息发送。仓库为私有库，队友需先获得 YideeZhang 授予的读取权限；没有权限时应直接向仓库所有者申请，不要绕过认证。
+以下内容可整体作为一条 Codex 用户消息发送。仓库已经公开可见。
 
 ---
 
