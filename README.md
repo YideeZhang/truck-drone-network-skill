@@ -4,8 +4,6 @@ A self-contained Codex Skill and Python pipeline for real regional road/populati
 
 Repository: [YideeZhang/truck-drone-network-skill](https://github.com/YideeZhang/truck-drone-network-skill). It is initially **private**. The owner must grant teammates repository access before clone; a 404 can mean missing permission, not a wrong URL. No new public software licence or data-redistribution permission is implied; see `NOTICE`.
 
-Development/shared environment: `C:/Users/59167/Desktop/Home/PythonProject/E-Truck-Drone-System/.venv`; original-host interpreter `C:/Users/59167/Desktop/Home/PythonProject/E-Truck-Drone-System/.venv/Scripts/python.exe`. All development verification used that existing environment. A teammate uses a separately confirmed existing Python 3.12 interpreter and records it. No command in this pipeline creates a venv or installs packages automatically.
-
 ## Start with Codex
 
 ```powershell
