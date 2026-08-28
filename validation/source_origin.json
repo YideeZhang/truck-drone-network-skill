@@ -1,0 +1,24 @@
+{
+  "purpose": "source provenance, not a requirement to access the original private project",
+  "source_project": "E-Truck-Drone-System_TRE",
+  "files": [
+    {
+      "path": "skills/build-truck-drone-network/scripts/build_demand_master.py",
+      "sha256": "fafa7bac745a73941921448de84ebf69f2fa42be9476ed0ad1d5f6b267266631"
+    },
+    {
+      "path": "skills/build-truck-drone-network/scripts/build_osm_canonical.py",
+      "sha256": "963c4607245c2487d897fdf4cc144c33099ce8002b9a5c4f0826c468177c8953"
+    },
+    {
+      "path": "parameters/wuding_huanzhou_drone_network_v1.json",
+      "sha256": "3c46eb3c6a768580d38b94f11c6be9036a40874552c0f953ff68b2e97cb7245d"
+    },
+    {
+      "path": "parameters/wuding_county_amap_master_v1.json",
+      "sha256": "0c9be0f48bb2e1e2f94f971102ebc95b84c2917f2f65d2a351b1f4733fd0f496"
+    }
+  ],
+  "historical_Wuding_goldens_rerun": false,
+  "portable_interface_version": "portable-wuding-style.v2"
+}

@@ -1,0 +1,22 @@
+Private research software distributed by the E-Truck-Drone-System_TRE repository owner.
+No new public open-source licence has been applied to the project-derived code.
+The repository is intended for the owner's authorised research collaborators.
+Ask the repository owner before public redistribution or relicensing.
+
+No third-party GIS dataset or commercial route response is included in this code repository.
+External data retain their own licences and attribution requirements. A private GitHub
+repository is not a substitute for permission to redistribute those datasets.
+
+OSM: copyright OpenStreetMap contributors; Open Database License (ODbL).
+LINZ/Stats NZ/WorldPop: verify the specific selected dataset's licence at acquisition;
+do not assume that a portal-wide label covers every layer, year, or product.
+AMap: no key, response archive, tile database, or bulk downloader is shipped.
+
+The demand builder and road noding core derive from the owner's existing
+build-truck-drone-network skill. The rest of this distribution adapts approved
+Wuding scientific definitions into a standalone pipeline, not a claim that
+historical Wuding production releases have been rerun byte-for-byte.
+
+NumPy, pandas, NetworkX, SciPy, Shapely, pyproj, GeoPandas, pyogrio, Rasterio,
+Matplotlib, PyYAML and pytest are external dependencies, not vendored libraries.
+Their own licences apply to their distributions.

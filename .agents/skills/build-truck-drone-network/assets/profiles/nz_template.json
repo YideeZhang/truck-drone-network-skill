@@ -1,0 +1,79 @@
+{
+  "schema_version": "portable-profile-v2",
+  "profile_version": "nz-area-selection-pending-v1",
+  "synthetic_fixture": false,
+  "approval": {"status": "pending_regional_parameter_review", "authority": null},
+  "region": {"region_id": "NZ_REQUIRED_TA_CODE", "name": "REQUIRED_REAL_ADMINISTRATIVE_NAME", "country_code": "NZ", "processing_crs": "EPSG:2193"},
+  "execution": {"python_interpreter": "current", "create_environment": false, "output_root": "network/processed/nz_selected/release_v1", "max_scope_terminals":500},
+  "demand": {
+    "boundary_path": "data/raw/nz_selected/boundary.gpkg", "boundary_layer":"boundary",
+    "population_raster_path":"data/raw/nz_selected/population_counts_100m.tif", "target_projected_crs":"EPSG:2193",
+    "target_resolution_m":100, "native_resolution_tolerance_fraction":0.2, "connectivity":8,
+    "population_threshold":0.0, "threshold_operator":"greater_than", "boundary_cell_inclusion":"cell_center_all_touched_false",
+    "official_population_total":null, "official_total_source":null, "official_total_reference_year":null,
+    "node_id_prefix":"NZ_E", "stable_order":"minimum_component_raster_row_then_minimum_column",
+    "depot":{"id":"NZ_DEPOT", "x":null, "y":null, "crs":"EPSG:2193"}
+  },
+  "dem":{"path":"data/raw/nz_selected/dem.tif", "vertical_unit":"m", "vertical_datum":"REQUIRED"},
+  "roads": {
+    "access_threshold_m":200, "fallback_ratio":0.2, "context_buffer_m":2000,
+    "minimum_segment_m":0.001, "coordinate_decimals":6,
+    "junction_priority":true, "junction_radius_m":100, "junction_extra_m":30,
+    "secondary_gap_max_m":750,
+    "excluded_classes":["footway","path","cycleway","steps","pedestrian","bridleway"],
+    "excluded_access":["no","private"],
+    "osm":{
+      "path":"data/prepared/nz_selected/osm_roads.gpkg", "layer":"roads", "provider_name":"OSM",
+      "source_url":"https://download.geofabrik.de/australia-oceania/new-zealand.html", "license":"ODbL",
+      "secondary_classes":["trunk","trunk_link","primary","primary_link","secondary","secondary_link"],
+      "mapping_status":"proposal_requires_regional_approval_not_observed_two_class_system",
+      "fields":{"id":"osm_id","class":"highway","name":"name","ref":"ref","access":"access","oneway":"oneway","layer":"layer","bridge":"bridge","tunnel":"tunnel"}
+    }
+  },
+  "truck":{
+    "vehicle":"eActros 600 28t rigid research scenario", "mass_kg":28000, "flat_kwh_per_km":1.03,
+    "gravity_m_s2":9.81, "uphill_efficiency":0.90, "dem_interval_m":40,
+    "speeds_kmh":{"secondary":35,"residential":15},
+    "evidence_status":"Wuding_technology_proxy_transfer_pending_approval_not_NZ_observation",
+    "energy_source":"https://www.daimlertruck.com/en/newsroom/events/2024/eactros-600-european-testing-tour-2024",
+    "mass_source":"https://www.mercedes-benz-trucks.com/content/dam/brandhub/markets/gb/files/product-sheets/eActros-600-product-sheet.pdf.coredownload.pdf"
+  },
+  "goods":{"kg_per_person_24h":2.0,"evidence_status":"research_emergency_goods_rule_transfer_requires_approval"},
+  "energy":{
+    "people_per_household":null, "annual_household_kwh":null, "annual_hours":8760,
+    "outage_hours":12, "critical_fraction":0.35,
+    "household_source":null,"electricity_source":null,"reference_year":null,
+    "evidence_status":"local_statistics_required_emergency_parameters_research_assumptions"
+  },
+  "microgrid":{
+    "coverage_time_min":45, "coverage_distance_m":10000, "max_candidates":500,
+    "solver_time_limit_s":300, "objective_tolerance":0.000001,
+    "coverage_meaning":"road_service_cluster_not_physical_electricity_distribution",
+    "parameter_status":"Wuding_research_coverage_transfer_requires_approval"
+  },
+  "drone":{
+    "platform":"DJI FlyCart 200 four-DB2400/DL200 historical planning proxy",
+    "nominal_battery_kwh":9.60848, "cruise_m_s":20, "climb_m_s":3, "descent_m_s":3,
+    "clearance_m":60, "maximum_altitude_m":6000, "dem_interval_m":30, "reserve_fraction":0.2,
+    "max_raw_legs":500000, "publish_customer_pair_candidates":true,
+    "states":{"empty":{"payload_kg":0,"depletion_range_km":36,"depletion_hover_min":25},
+              "full":{"payload_kg":200,"depletion_range_km":10,"depletion_hover_min":7}},
+    "official_specs":"https://www.dji.com/cn/flycart-200/specs",
+    "evidence_status":"official_endpoint_based_proxy_requires_configuration_and_local_approval"
+  },
+  "scenarios":{
+    "enabled":false, "approval_status":"pending_research_scenario_review", "replicates":2, "maximum_replicates":10,
+    "severity_lambda":{"mild":0.2,"moderate":0.5,"severe":0.8}, "smax_weight":0.7, "smean_weight":0.3,
+    "sigmoid_steepness":10, "degrade_midpoint":0.25, "failure_midpoint":0.55, "q_damage_min":0,"q_damage_max":0.8,
+    "degraded_time_min":1.10, "degraded_time_span":1.90, "degraded_energy_min":1.05, "degraded_energy_span":0.95,
+    "seed_namespace":"NZ_SELECTED_PORTABLE_G2_V2",
+    "evidence_status":"research_assumptions_not_observed_disaster_probabilities"
+  },
+  "scopes":[{"combination_id":"NZ_ALL","directory":"1_town/all_administration","unit_ids":[],"depot_terminal_ids":["NZ_DEPOT"],"network_ids":{"NZ_DEPOT":"NZ_ALL_D_MAIN"}}],
+  "inputs":[
+    {"role":"boundary","path":"data/raw/nz_selected/boundary.gpkg","source_url":"https://datafinder.stats.govt.nz/","source_name":"Stats NZ territorial authority boundary; replace with exact dataset","license":"REQUIRED","acquired_at":"REQUIRED","units":"projected_metre_geometry","redistribution_permitted":false},
+    {"role":"population","path":"data/raw/nz_selected/population_counts_100m.tif","source_url":"https://hub.worldpop.org/project/categories?id=3","source_name":"WorldPop New Zealand population COUNTS 100m; exact year/product required","license":"REQUIRED","acquired_at":"REQUIRED","units":"people_per_cell","redistribution_permitted":false},
+    {"role":"dem","path":"data/raw/nz_selected/dem.tif","source_url":"https://data.linz.govt.nz/","source_name":"LINZ DTM/DEM exact product required, not DSM/hillshade","license":"REQUIRED","acquired_at":"REQUIRED","units":"m","redistribution_permitted":false},
+    {"role":"roads","path":"data/prepared/nz_selected/osm_roads.gpkg","source_url":"https://download.geofabrik.de/australia-oceania/new-zealand.html","source_name":"Regional extraction from archived NZ OSM snapshot; add original PBF and extraction audit to this inventory","license":"ODbL","acquired_at":"REQUIRED","units":"projected_metre_geometry","redistribution_permitted":false}
+  ]
+}

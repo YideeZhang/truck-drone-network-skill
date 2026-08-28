@@ -1,0 +1,4 @@
+interface:
+  display_name: "Truck–Drone Network Builder"
+  short_description: "Build traceable truck, energy, and drone networks"
+  default_prompt: "Use $build-truck-drone-network to audit real regional data, build a whole-region mother graph, and publish validated Wuding-style truck, energy-service, and two-payload drone networks."

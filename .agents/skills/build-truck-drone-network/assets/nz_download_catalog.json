@@ -1,0 +1,16 @@
+{
+  "catalog_status":"review_exact_dataset_and_licence_before_download",
+  "datasets":[
+    {"role":"raw_osm","website":"https://download.geofabrik.de/australia-oceania/new-zealand.html","data_type":"OpenStreetMap raw PBF with real way IDs, topology and tags",
+     "download_url":"https://download.geofabrik.de/australia-oceania/new-zealand-latest.osm.pbf","allowed_hosts":["download.geofabrik.de"],
+     "path":"data/raw/nz_selected/new-zealand.osm.pbf","max_bytes":1000000000,"license":"ODbL","license_reviewed":false,
+     "note":"Mutable latest URL: retain acquisition timestamp, hash and original snapshot metadata. Prefer an immutable dated snapshot after inspection."},
+    {"role":"boundary","website":"https://datafinder.stats.govt.nz/","data_type":"Territorial Authority polygon; exact code/year, full-resolution geometry; GeoPackage or complete Shapefile","download_url":null},
+    {"role":"subunits","website":"https://datafinder.stats.govt.nz/","data_type":"Wards/community boards/approved SA2 polygon subdivision; actual stable IDs and year; not assumed equivalent to townships","download_url":null},
+    {"role":"population","website":"https://hub.worldpop.org/project/categories?id=3","data_type":"New Zealand country 100m population COUNTS GeoTIFF, chosen year and product release, plus metadata/license","download_url":null},
+    {"role":"dem","website":"https://data.linz.govt.nz/","data_type":"Regional bare-earth DTM/DEM GeoTIFF tiles covering administration, context buffer and flight envelope; explicit vertical datum and metres","download_url":null},
+    {"role":"fallback_roads","website":"https://data.linz.govt.nz/","data_type":"NZ Road Centre Line or licensed local road controlling authority vector, IDs/class/direction/source metadata; only after OSM gate failure","download_url":null},
+    {"role":"official_population","website":"https://www.stats.govt.nz/topics/census/","data_type":"Selected TA census usually resident population count, census year, household count/size and exact code; CSV/table source","download_url":null},
+    {"role":"electricity","website":"https://www.mbie.govt.nz/building-and-energy/energy-and-natural-resources/energy-statistics-and-modelling/energy-statistics/electricity-statistics","data_type":"Residential electricity kWh/year and compatible household/connection denominator; national or local official table, year and units","download_url":null}
+  ]
+}

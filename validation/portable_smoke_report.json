@@ -1,0 +1,142 @@
+{
+  "generated_at_utc": "2026-08-28T04:26:01.666096+00:00",
+  "evidence_type": "SYNTHETIC_OFFLINE_FORWARD_TEST_NOT_REAL_NZ_NETWORK",
+  "python_executable": "C:\\Users\\59167\\Desktop\\Home\\PythonProject\\E-Truck-Drone-System\\.venv\\Scripts\\python.exe",
+  "development_shared_environment": "C:/Users/59167/Desktop/Home/PythonProject/E-Truck-Drone-System/.venv",
+  "tests": {
+    "tests": 20,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "test_seconds": 6.708,
+  "validation": {
+    "checks": {
+      "customer_coordinates": true,
+      "depot_roles": true,
+      "directional_energy": true,
+      "microgrid_assignment_conservation": true,
+      "no_synthetic_road_connectors": true,
+      "population_conservation": true,
+      "raw_drone_2NN_roles": true,
+      "real_source_lineage": true,
+      "runtime_paths_active_only": true,
+      "source_gate": true,
+      "strict_lineage_and_cost_sums": true
+    },
+    "model_adapter_run": false,
+    "mother_physical_edges": 24,
+    "mother_terminals": 9,
+    "network_count": 2,
+    "passed": true,
+    "scenario_count": 12,
+    "scopes": [
+      {
+        "anchors": 9,
+        "combination_id": "DEMO_C2_WEST_EAST",
+        "goods_per_depot": 8,
+        "logical_arcs": 24,
+        "networks": 1,
+        "physical_edges": 12,
+        "raw_drone_legs": 162,
+        "terminals": 9
+      },
+      {
+        "anchors": 6,
+        "combination_id": "DEMO_C1_WEST",
+        "goods_per_depot": 5,
+        "logical_arcs": 16,
+        "networks": 1,
+        "physical_edges": 12,
+        "raw_drone_legs": 72,
+        "terminals": 6
+      }
+    ],
+    "truck_legal_access_or_drone_route_approval_proven": false,
+    "validation_version": "portable-independent-v2"
+  },
+  "scopes": [
+    {
+      "all_ordered_anchor_pairs": 72,
+      "combination_id": "DEMO_C2_WEST_EAST",
+      "drone_customer_candidate_count": 144,
+      "drone_expected_2NN": 162,
+      "drone_raw_leg_count": 162,
+      "logical_arc_count": 24,
+      "networks": [
+        {
+          "depot_population_excluded": 40.0,
+          "energy_sites": 1,
+          "goods_customers": 8,
+          "local_goods_population": 1040.0,
+          "network_id": "DEMO_C2_WEST_EAST_D_DEMO_DEPOT"
+        }
+      ],
+      "physical_edge_count": 12,
+      "sampled_corridor_count": 117,
+      "terminal_count": 9
+    },
+    {
+      "all_ordered_anchor_pairs": 30,
+      "combination_id": "DEMO_C1_WEST",
+      "drone_customer_candidate_count": 60,
+      "drone_expected_2NN": 72,
+      "drone_raw_leg_count": 72,
+      "logical_arc_count": 16,
+      "networks": [
+        {
+          "depot_population_excluded": 40.0,
+          "energy_sites": 1,
+          "goods_customers": 5,
+          "local_goods_population": 620.0,
+          "network_id": "DEMO_C1_WEST_D_DEMO_DEPOT"
+        }
+      ],
+      "physical_edge_count": 12,
+      "sampled_corridor_count": 51,
+      "terminal_count": 6
+    }
+  ],
+  "mother": {
+    "physical_arcs": 48,
+    "physical_edges": 24,
+    "selected_provider": "SYNTHETIC_OSM_STYLE",
+    "source_gate": {
+      "demand_denominator": 8,
+      "depot_attached": true,
+      "depot_terminal_id": "DEMO_DEPOT",
+      "inaccessible_count": 0,
+      "inaccessible_ids": [],
+      "inaccessible_ratio": 0.0,
+      "provider": "SYNTHETIC_OSM_STYLE",
+      "qualified": true,
+      "rule": "distance > 200 m OR not bidirectionally Depot-connected; fail ratio >= 0.20"
+    },
+    "terminals": 9
+  },
+  "scenarios": {
+    "enabled": true,
+    "reference_rows": 24,
+    "reference_sha256": "cacbe5fdf8cdc6c9d98c3faece36847c99d672307b7c2787f6eaa2a9ff857bfb",
+    "scenario_count": 12
+  },
+  "deterministic_repeat_science_csv_match": true,
+  "deterministic_scientific_csv_count": 82,
+  "mother_core_reused_without_geometry_or_road_DEM_rebuild": true,
+  "first_build_seconds": 1.3130000000001019,
+  "repeat_build_seconds": 1.3590000000003783,
+  "reuse_build_seconds": 1.0,
+  "skill_source_hash_at_run": "7a9f4b85c5998e3d993fa0a4",
+  "core_mother_hashes": {
+    "directed_arc_nominal_costs.csv": "f083916a0396c255c144ff47faf69ca281b83543696e65034879c099689eda68",
+    "physical_edge_elevation_profiles.csv": "5fdc025a822e6d61135fa698cd8c1fce669f0a731abce3aa8e67ca1320c6a9d6",
+    "physical_edges.csv": "50519a0e19de258e1e66d00f898eca01ef6230171695503d5ccb02b1ce32a71b",
+    "terminal_registry.csv": "4e0837484b16d2e88687cf80e9307f90fda58e35aa4dae65c9b8fa14416f1b29"
+  },
+  "new_amap_requests": 0,
+  "real_nz_inputs_downloaded": false,
+  "real_nz_network_built": false,
+  "model_gurobi_or_training_run": false,
+  "whole_NZ_PBF_import_tested": false,
+  "dataset_bundle_including_synthetic_raw_tested": true
+}
